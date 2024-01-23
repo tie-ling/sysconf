@@ -34,7 +34,7 @@
   };
 
   fileSystems."/rtorrent" = {
-    device = "torrent_pool";
+    device = "rtorrent";
     fsType = "zfs";
     options = [ "X-mount.mkdir" "noatime" ];
   };

@@ -10,23 +10,19 @@
   systemd.tmpfiles.rules = [ "d '/home/our/新种子' 0755 our users 1d" ];
   systemd.services.rtorrent.serviceConfig.LimitNOFILE = 10240;
 
-  # no swap for NAS
-  swapDevices = [ ];
-
   services = {
     zfs = {
       autoScrub = {
         enable = true;
         interval = "quarterly";
       };
-      # autoSnapshot enabled in common.nix
     };
     nfs = {
       server = {
         enable = true;
         createMountPoints = true;
         exports = ''
-          /tmp/BitTorrent    192.168.1.0/24(ro,all_squash)
+          /rtorrent    192.168.1.0/24(ro,all_squash)
         '';
         # disable nfs3
         extraNfsdConfig = ''
@@ -45,7 +41,7 @@
       '';
       shares = {
         bt = {
-          path = "/tmp/BitTorrent";
+          path = "/rtorrent/已下载";
           "read only" = true;
           browseable = "yes";
           "guest ok" = "yes";
@@ -54,10 +50,11 @@
       };
     };
     rtorrent = {
-      enable = false;
-      dataDir = "/tmp/BitTorrent";
-      downloadDir = "/tmp/BitTorrent/已下载";
-      openFirewall = false;
+      enable = true;
+      dataDir = "/rtorrent/dataDir";
+      downloadDir = "/rtorrent/已下载";
+      openFirewall = true;
+      port = 50000;
       dataPermissions = "0755";
       configText = ''
         # rtorrent program settings
@@ -66,7 +63,6 @@
         system.umask.set = 0022
 
         # torrent network settings
-        network.port_range.set = 51413-51413
         dht.mode.set = on
         protocol.pex.set = yes
         trackers.use_udp.set = yes
@@ -109,9 +105,6 @@
         ### Memory Settings
         pieces.hash.on_completion.set = no
         pieces.preload.type.set = 1
-
-        ### add more torrents at once
-        network.xmlrpc.size_limit.set = 5M
       '';
     };
     openssh = {
@@ -157,8 +150,6 @@
           enable = true;
           address = "::1";
           destination = "::1";
-          #keys = "‹name›-keys.dat";
-          #key is generated if missing
           port = 65222;
           accessList = [ ]; # to lazy to only allow zfs-root laptops
         };
