@@ -14,7 +14,7 @@
     (modulesPath + "/profiles/hardened.nix")
   ];
 
-  boot.blacklistedKernelModules = lib.mkForce [];
+  boot.blacklistedKernelModules = lib.mkForce [ ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

@@ -36,7 +36,7 @@
       };
     };
     samba = {
-      enable = true;
+      enable = false;
       openFirewall = true;
       extraConfig = ''
         guest account = nobody
@@ -54,7 +54,7 @@
       };
     };
     rtorrent = {
-      enable = true;
+      enable = false;
       dataDir = "/tmp/BitTorrent";
       downloadDir = "/tmp/BitTorrent/已下载";
       openFirewall = false;
