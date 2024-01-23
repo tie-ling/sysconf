@@ -1,5 +1,6 @@
 {
   # When creating zfs pools, use -o compatibility=zol-0.6.1
+  # Use mountpoint=legacy for each and every dataset
   networking = {
     hostName = "tieling";
     hostId = "abcd1234";
@@ -52,6 +53,10 @@
   fileSystems."/boot" = {
     device = "/dev/disk/by-id/ata-WDC_WD20EJRX-89G3VY0_WD-WCC4M4SUXL4D-part1";
     fsType = "vfat";
+    options = [
+      "x-systemd.idle-timeout=1min"
+      "x-systemd.automount"
+    ];
   };
 
   swapDevices = [

@@ -36,6 +36,10 @@
     device =
       "/dev/disk/by-id/nvme-SAMSUNG_MZVLV256HCHP-000H1_S2CSNA0J547878-part1";
     fsType = "vfat";
+    options = [
+      "x-systemd.idle-timeout=1min"
+      "x-systemd.automount"
+    ];
   };
 
   swapDevices = [{
