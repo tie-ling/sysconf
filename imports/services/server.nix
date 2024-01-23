@@ -7,7 +7,6 @@
     "fs.file-max" = 65536;
   };
   # clean up watch dir after one day
-  systemd.tmpfiles.rules = [ "d '/home/our/新种子' 0755 our users 1d" ];
   systemd.services.rtorrent.serviceConfig.LimitNOFILE = 10240;
 
   services = {
@@ -19,7 +18,7 @@
     };
     nfs = {
       server = {
-        enable = true;
+        enable = false;
         createMountPoints = true;
         exports = ''
           /rtorrent    192.168.1.0/24(ro,all_squash)
@@ -70,7 +69,7 @@
 
         # watch dir
         # created and permission set by systemd tmpdir rules
-        method.insert = cfg.watchDir1, private|const|string, "/home/our/新种子/"
+        method.insert = cfg.watchDir1, private|const|string, "/rtorrent/watch"
         # Watch directories (add more as you like, but use unique schedule names)
         schedule2 = watch_start, 10, 10, ((load.start, (cat, (cfg.watchDir1), "/*.torrent")))
 

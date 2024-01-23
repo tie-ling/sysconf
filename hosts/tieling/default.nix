@@ -50,6 +50,13 @@
     fsType = "zfs";
   };
 
+  fileSystems."/home/our/新种子" = {
+    device = "/rtorrent/watch";
+    fsType = "none";
+    options = [ "bind" "X-mount.mkdir" "nofail" ];
+  };
+
+
   fileSystems."/boot" = {
     device = "/dev/disk/by-id/ata-WDC_WD20EJRX-89G3VY0_WD-WCC4M4SUXL4D-part1";
     fsType = "vfat";
