@@ -45,5 +45,10 @@
             }
           ];
         };
-    in { nixosConfigurations = { qinghe = mkHost "qinghe" "x86_64-linux"; }; };
+    in {
+      nixosConfigurations = {
+        qinghe = mkHost "qinghe" "x86_64-linux";
+        tieling = mkHost "tieling" "x86_64-linux";
+      };
+    };
 }

@@ -1,5 +1,11 @@
 {
 
+  networking = {
+    hostName = "tieling";
+    hostId = "abcd1234";
+  };
+  time.timeZone = "Asia/Shanghai";
+
   imports = [ ../../imports/profiles/server.nix ];
 
   boot.initrd.availableKernelModules =
