@@ -1,5 +1,5 @@
 {
-
+  # When creating zfs pools, use -o compatibility=zol-0.6.1
   networking = {
     hostName = "tieling";
     hostId = "abcd1234";
@@ -30,6 +30,12 @@
     device = "/old/var/lib";
     fsType = "none";
     options = [ "bind" "X-mount.mkdir" "noatime" ];
+  };
+
+  fileSystems."/rtorrent" = {
+    device = "torrent_pool";
+    fsType = "zfs";
+    options = [ "X-mount.mkdir" "noatime" ];
   };
 
   fileSystems."/old" = {
