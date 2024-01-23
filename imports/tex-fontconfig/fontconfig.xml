@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<!-- /etc/fonts/fonts.conf file to configure system font access -->
+<fontconfig>
+  <match target="pattern">
+    <test name="family" compare="contains">
+      <string>times</string>
+    </test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>XCharter</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="family" compare="contains">
+      <string>arial</string>
+    </test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>XCharter</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="family" compare="contains">
+      <string>segoe</string>
+    </test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>XCharter</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="family" compare="contains">
+      <string>helvetica</string>
+    </test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>XCharter</string>
+    </edit>
+  </match>
+</fontconfig>
