@@ -2,11 +2,11 @@
   environment = {
     etc = {
       "ssh/ssh_host_ed25519_key" = {
-        source = "/oldroot/etc/ssh/ssh_host_ed25519_key";
+        source = "/old/etc/ssh/ssh_host_ed25519_key";
         mode = "0600";
       };
       "ssh/ssh_host_rsa_key" = {
-        source = "/oldroot/etc/ssh/ssh_host_rsa_key";
+        source = "/old/etc/ssh/ssh_host_rsa_key";
         mode = "0600";
       };
     };
