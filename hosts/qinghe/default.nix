@@ -39,6 +39,8 @@
     options = [
       "x-systemd.idle-timeout=1min"
       "x-systemd.automount"
+      "fmask=0077"
+      "dmask=0077"
     ];
   };
 
