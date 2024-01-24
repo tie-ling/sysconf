@@ -18,7 +18,7 @@
     };
     nfs = {
       server = {
-        enable = false;
+        enable = true;
         createMountPoints = true;
         exports = ''
           /rtorrent    192.168.1.0/24(ro,all_squash)
@@ -31,14 +31,35 @@
       };
     };
     samba = {
-      enable = false;
+      enable = true;
       openFirewall = true;
       extraConfig = ''
         guest account = nobody
         map to guest = bad user
-        server smb encrypt = off
+
+        ### hardening
+        server min protocol = SMB3_11
+        server smb encrypt = required
+        server signing = mandatory
+        server smb3 encryption algorithms = AES-256-GCM
+        server smb3 signing algorithms = AES-128-GMAC, AES-128-CMAC
+
+        client min protocol = SMB3_11
+        client smb encrypt = required
+        client signing = required
+        client ipc signing  = required
+        client protection = encrypt
+        client smb3 encryption algorithms = AES-256-GCM
+        client smb3 signing algorithms = AES-128-GMAC, AES-128-CMAC
       '';
       shares = {
+        our = {
+          path = "/home/our";
+          "read only" = false;
+          browseable = "yes";
+          "guest ok" = "no";
+          "hosts allow" = "192.168.1.124";
+        };
         bt = {
           path = "/rtorrent/已下载";
           "read only" = true;
