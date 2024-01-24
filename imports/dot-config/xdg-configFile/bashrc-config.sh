@@ -20,8 +20,6 @@ if [ ! -d $HOME/Downloads ]; then
     ln --symbolic /old/home/yc/Downloads $HOME/Downloads
 fi
 
-export GNUPGHOME="/old/home/yc/gpg"
-
 y () {
     mpv "${@}"
 }

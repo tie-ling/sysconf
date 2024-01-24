@@ -20,6 +20,8 @@
       W3M_DIR = "$HOME/.config/w3m";
       XCURSOR_THEME = "Adwaita";
       XCURSOR_SIZE = "48";
+      GNUPGHOME = "/old/home/yc/gpg";
+
     };
   };
 }
