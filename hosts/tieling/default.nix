@@ -39,6 +39,12 @@
     options = [ "X-mount.mkdir" "noatime" ];
   };
 
+  fileSystems."/home/our/新种子" = {
+    device = "/rtorrent/watch";
+    fsType = "none";
+    options = [ "bind" "X-mount.mkdir" "nofail" ];
+  };
+
   fileSystems."/old" = {
     device = "npool/root";
     fsType = "zfs";
