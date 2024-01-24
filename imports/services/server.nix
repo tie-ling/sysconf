@@ -56,9 +56,8 @@
       port = 50000;
       dataPermissions = "0755";
       configText = ''
+        # pyroadmin config --create-rtorrent-rc
         # rtorrent program settings
-        encoding.add = UTF-8
-        pieces.hash.on_completion.set = 0
         system.umask.set = 0022
 
         # torrent network settings
@@ -73,37 +72,8 @@
         # Watch directories (add more as you like, but use unique schedule names)
         schedule2 = watch_start, 10, 10, ((load.start, (cat, (cfg.watchDir1), "/*.torrent")))
 
-        # disable prealloc for zfs
-        system.file.allocate.set = 0
-
-        # performance tuning
-        # https://github.com/rakshasa/rtorrent/issues/1046
-        ### BitTorrent
-        # Global upload and download rate in KiB, `0` for unlimited
-        throttle.global_down.max_rate.set = 0
-        throttle.global_up.max_rate.set = 0
-
-        # Maximum number of simultaneous downloads and uploads slots
-        throttle.max_downloads.global.set = 150
-        throttle.max_uploads.global.set = 300
-
-        # Maximum and minimum number of peers to connect to per torrent while downloading
-        throttle.min_peers.normal.set = 30
-        throttle.max_peers.normal.set = 150
-
-        # Same as above but for seeding completed torrents (seeds per torrent)
-        throttle.min_peers.seed.set = -1
-        throttle.max_peers.seed.set = -1
-
-        network.max_open_files.set = 4096
-        network.max_open_sockets.set = 1536
-        network.http.max_open.set = 48
-        network.send_buffer.size.set = 128M
-        network.receive_buffer.size.set = 4M
-
-        ### Memory Settings
-        pieces.hash.on_completion.set = no
-        pieces.preload.type.set = 1
+        # xmlrpc
+        network.xmlrpc.size_limit.set = 8M
       '';
     };
     openssh = {
