@@ -36,7 +36,7 @@
   fileSystems."/rtorrent" = {
     device = "rtorrent";
     fsType = "zfs";
-    options = [ "X-mount.mkdir" "noatime" ];
+    options = [ "X-mount.mkdir" "noatime" "nofail" ];
   };
 
   fileSystems."/home/our/新种子" = {
