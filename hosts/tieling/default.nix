@@ -15,6 +15,18 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
+  services.sanoid = {
+    enable = true;
+    datasets = {
+      "npool/home" = {
+        autosnap = true;
+        autoprune = true;
+        daily = 3;
+        monthly = 6;
+      };
+    };
+  };
+
   fileSystems."/" = {
     device = "none";
     fsType = "tmpfs";
