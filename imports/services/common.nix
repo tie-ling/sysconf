@@ -10,6 +10,9 @@ in {
   };
   config = {
     services = {
+      fwupd = {
+        enable = true;
+      };
       logrotate.checkConfig = false;
       stubby = {
         enable = true;
