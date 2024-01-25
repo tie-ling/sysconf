@@ -14,7 +14,7 @@
            return 1
         fi
         nixos-rebuild boot \
-         --flake git+file:///home/yc/githost/systemConfiguration
+         --flake git+file:///home/yc/git/sysconf
       }
       Ns () {
         if test -z "$TMUX"; then
@@ -22,7 +22,7 @@
            return 1
         fi
         nixos-rebuild switch \
-         --flake git+file:///home/yc/githost/systemConfiguration
+         --flake git+file:///home/yc/git/sysconf
       }
       tm () {
          tmux attach-session

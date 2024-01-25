@@ -1,4 +1,5 @@
-{
+{ pkgs, ... }: {
+
   # rtorrent related 
 
   boot.kernel.sysctl = {
