@@ -21,6 +21,7 @@
       "npool/home" = {
         autosnap = true;
         autoprune = true;
+        hourly = 2;
         daily = 3;
         monthly = 6;
       };
