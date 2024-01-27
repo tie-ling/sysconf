@@ -55,6 +55,8 @@
       extraConfig = ''
         map to guest = Never
         server smb encrypt = required
+        server min protocol = SMB3_11
+        client min protocol = SMB3_11
       '';
       shares = {
         our = {
