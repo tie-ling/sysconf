@@ -34,6 +34,7 @@
         '';
       };
     };
+    samba-wsdd.enable = false;
     samba = {
       enable = true;
       openFirewall = true;
@@ -44,6 +45,10 @@
 
       # 用windows电脑建立连接：此电脑->映射网络驱动器->输入
       # \\192.168.1.192\bt，勾选“使用其他凭据”，输入用户名our和密码。
+      # 必须直接输入ip地址来建立连接，基于安全原因，自动探索模式和访客
+      # 已被禁用。
+      enableNmbd = false;
+      enableWinbindd = false;
       extraConfig = ''
         map to guest = Never
         server smb encrypt = required
