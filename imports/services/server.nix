@@ -34,10 +34,10 @@
     samba = {
       enable = true;
       openFirewall = true;
+      # add user password with
+      # smbpasswd -a our
       extraConfig = ''
         map to guest = Never
-
-        unix password sync = yes
 
         ### hardening
         server smb encrypt = required
