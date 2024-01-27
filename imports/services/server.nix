@@ -18,6 +18,9 @@
       };
     };
     nfs = {
+      # kodi/coreelec uses nfs3 by default
+      # switch to nfs4 by using settings here
+      # https://kodi.wiki/view/Settings/Services/NFS_Client
       server = {
         enable = true;
         createMountPoints = true;
@@ -37,6 +40,9 @@
       # add user password with
       # smbpasswd -a our
       # saves to /var/lib/samba
+
+      # 用windows电脑建立连接：此电脑->映射网络驱动器->输入
+      # \\192.168.1.192\bt，勾选“使用其他凭据”，输入用户名和密码。
       extraConfig = ''
         map to guest = Never
         server smb encrypt = required
