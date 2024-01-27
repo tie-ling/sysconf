@@ -39,9 +39,7 @@
       # saves to /var/lib/samba
       extraConfig = ''
         map to guest = Never
-        server min protocol = SMB3_11
         server smb encrypt = required
-        server smb3 encryption algorithms = AES-256-GCM
       '';
       shares = {
         our = {
