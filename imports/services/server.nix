@@ -42,8 +42,7 @@
       enable = true;
       openFirewall = true;
       # add user password with
-      # smbpasswd -a our
-      # woxiangshuoqinaidemaizi
+      # printf 'woxiangshuoqinaidemaizi\nwoxiangshuoqinaidemaizi' | smbpasswd -s -a our
       # saves to /var/lib/samba
 
       # 用windows电脑建立连接：此电脑->映射网络驱动器->输入
