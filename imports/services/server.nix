@@ -37,6 +37,8 @@
       extraConfig = ''
         map to guest = Never
 
+        unix password sync = yes
+
         ### hardening
         server smb encrypt = required
         server smb3 encryption algorithms = AES-256-GCM
