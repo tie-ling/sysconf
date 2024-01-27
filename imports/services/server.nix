@@ -35,13 +35,9 @@
       enable = true;
       openFirewall = true;
       # add user password with
-      # smbpasswd -a our
+      # smbpasswd our
       extraConfig = ''
         map to guest = Never
-
-        ### hardening
-        server smb encrypt = required
-        server smb3 encryption algorithms = AES-256-GCM
       '';
       shares = {
         our = {
