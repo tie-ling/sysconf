@@ -13,22 +13,15 @@ in {
     };
     ssh = {
       matchBlocks = {
-        "unixpool.math.tu-berlin.de".user = "cma-1e1";
-        "codeberg.org".user = "git";
         "github.com".user = "git";
         "tl.yc" = {
           user = "yc";
           port = 65222;
         };
-        "3ldetowqifu5ox23snmoblv7xapkd26qyvex6fwrg6zpdwklcatq.b32.i2p" = {
+        "bnpkzvlrq6ra74edhembqggiq55brihr2xgkbgdny4pawheknsyq.b32.i2p" = {
           user = "yc";
           port = 65222;
           proxyCommand = "${pkgs.libressl.nc}/bin/nc -x localhost:4447 %h %p";
-        };
-        "ditgedyyvwsxspdmgpnzuzhj7p63snkiok54cphmvwcgnrjgw2lqgcad.onion" = {
-          user = "yc";
-          port = 22;
-          proxyCommand = "${pkgs.libressl.nc}/bin/nc -x localhost:9050 %h %p";
         };
       };
     };

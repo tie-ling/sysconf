@@ -21,6 +21,9 @@
       # kodi/coreelec uses nfs3 by default
       # switch to nfs4 by using settings here
       # https://kodi.wiki/view/Settings/Services/NFS_Client
+
+      # NO ENCRYPTION, CLEAR TEXT!
+      # use for only public shares or tunnel through something like ssh
       server = {
         enable = true;
         createMountPoints = true;
