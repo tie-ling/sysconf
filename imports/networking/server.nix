@@ -1,14 +1,11 @@
 {
   networking.firewall = {
+    # ports are also opened by other programs
     allowedTCPPorts = [
-      # bt
-      51413
       # nfsv4
       2049
     ];
     allowedUDPPorts = [
-      # bt
-      51413
     ];
   };
 }
