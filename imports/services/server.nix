@@ -35,8 +35,7 @@
       enable = true;
       openFirewall = true;
       extraConfig = ''
-        guest account = nobody
-        map to guest = bad user
+        map to guest = Never
 
         ### hardening
         server min protocol = SMB3_11
@@ -57,16 +56,10 @@
         our = {
           path = "/home/our";
           "read only" = false;
-          browseable = "yes";
-          "guest ok" = "no";
-          "hosts allow" = "192.168.1.124";
         };
         bt = {
           path = "/rtorrent/已下载";
           "read only" = true;
-          browseable = "yes";
-          "guest ok" = "yes";
-          "hosts allow" = "192.168.1.";
         };
       };
     };
