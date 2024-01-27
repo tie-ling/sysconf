@@ -40,6 +40,9 @@
     options = [ "bind" "X-mount.mkdir" "noatime" ];
   };
 
+  # use var/lib even if immutable root,
+  # important stuff like yggdrasil, i2pd and samba passwords are
+  # stored here
   fileSystems."/var/lib" = {
     device = "/old/var/lib";
     fsType = "none";
