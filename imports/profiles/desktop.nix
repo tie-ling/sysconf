@@ -6,7 +6,7 @@
     ../environment/common.nix
     ../environment/desktop.nix
     ../networking/common.nix
-    # ../networking/eduroam.nix
+    ../networking/eduroam.nix
     ../programs/common.nix
     ../programs/desktop.nix
     ../programs/home-manager.nix

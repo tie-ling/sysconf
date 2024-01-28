@@ -3,7 +3,7 @@
     openconnect = {
       interfaces = {
         tub = {
-          autoStart = true;
+          autoStart = false;
           gateway = "vpn.tu-berlin.de";
           protocol = "anyconnect";
           user = "yguo@tu-berlin.de";
@@ -12,7 +12,7 @@
       };
     };
     wireless = {
-      environmentFile = "/home/yc/Documents/wifipass.txt";
+      environmentFile = "/old/home/yc/eduroam.txt";
       networks = {
         "eduroam" = {
           authProtocols = [ "WPA-EAP" ];
