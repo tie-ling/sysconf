@@ -4,10 +4,13 @@
       interfaces = {
         tub = {
           autoStart = false;
-          gateway = "vpn.tu-berlin.de/full";
+          gateway = "vpn.tu-berlin.de";
           protocol = "anyconnect";
           user = "yguo@tu-berlin.de";
           passwordFile = "/old/home/yc/vpn.txt";
+          extraOptions = {
+            authgroup = "2-TU-Full-Tunnel";
+          };
         };
       };
     };
