@@ -4,7 +4,7 @@
       interfaces = {
         tub = {
           autoStart = false;
-          gateway = "vpn.tu-berlin.de";
+          gateway = "vpn.tu-berlin.de/full";
           protocol = "anyconnect";
           user = "yguo@tu-berlin.de";
           passwordFile = "/old/home/yc/vpn.txt";
