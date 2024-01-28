@@ -3,7 +3,7 @@
     openconnect = {
       interfaces = {
         tub = {
-          autoStart = false;
+          autoStart = true;
           gateway = "vpn.tu-berlin.de";
           protocol = "anyconnect";
           user = "yguo@tu-berlin.de";
