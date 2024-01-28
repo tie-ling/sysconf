@@ -1,5 +1,16 @@
 {
   networking = {
+    openconnect = {
+      interfaces = {
+        tub = {
+          autoStart = false;
+          gateway = "vpn.tu-berlin.de";
+          protocol = "anyconnect";
+          user = "yguo@tu-berlin.de";
+          passwordFile = "/old/home/yc/vpn.txt";
+        };
+      };
+    };
     wireless = {
       environmentFile = "/home/yc/Documents/wifipass.txt";
       networks = {
