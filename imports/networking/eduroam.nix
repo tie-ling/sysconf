@@ -9,6 +9,7 @@
           user = "yguo@tu-berlin.de";
           passwordFile = "/old/home/yc/vpn.txt";
           extraOptions = {
+            # https://www.tu.berlin/campusmanagement/it-support/vpn-installation-und-nutzung-unter-linux
             authgroup = "2-TU-Full-Tunnel";
           };
         };
