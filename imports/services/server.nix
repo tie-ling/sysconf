@@ -61,10 +61,12 @@
         our = {
           path = "/home/our";
           "read only" = false;
+          "hosts allow" = "192.168.1.";
         };
         bt = {
           path = "/rtorrent/已下载";
           "read only" = true;
+          "hosts allow" = "192.168.1.";
         };
       };
     };
