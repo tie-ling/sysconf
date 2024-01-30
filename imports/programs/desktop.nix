@@ -21,7 +21,7 @@
     enable = true;
     extraPackages = builtins.attrValues {
       inherit (pkgs)
-        swaylock swayidle foot gammastep wl-gammactl brightnessctl fuzzel grim
+        swaylock swayidle foot wl-gammactl brightnessctl fuzzel grim
         libva-utils w3m gsettings-desktop-schemas pavucontrol waybar
         wl-clipboard wf-recorder;
     };

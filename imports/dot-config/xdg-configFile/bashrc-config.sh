@@ -168,3 +168,6 @@ tubb () {
     fi
     wl-copy -n < /old/home/yc/vpn.txt
 }
+
+# nix path-info --recursive --closure-size /run/current-system | sort -nk2 | less
+# nix why-depends /run/current-system /nix/store/q5b4iwjcyvcvw1a3w8d20rbxwn7lcw1n-networkmanager-1.44.2
