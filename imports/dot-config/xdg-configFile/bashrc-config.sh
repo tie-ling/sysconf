@@ -47,17 +47,17 @@ gpub ()
     local git_paths="/old/home/yc/sysconf /old/home/yc/Downloads/tub /old/home/yc/passwd"
     if [ "${input}" == "s" ]; then
         for path in ${git_paths}; do
+            echo "================"
             echo "${path}"
             git -C "${path}" status
             git -C "${path}" push
-            echo "================"
         done
     else
         for path in ${git_paths}; do
+            echo "================"
             echo "${path}"
             git -C "${path}" status
             git -C "${path}" pull --rebase
-            echo "================"
         done
     fi
 }
@@ -163,5 +163,8 @@ gm () {
 }
 
 tubb () {
-    pass de/tub | head -n1 | wl-copy
+    if [ ! -f /old/home/yc/vpn.txt ]; then
+        pass de/tub | head -n1 > /old/home/yc/vpn.txt
+    fi
+    wl-copy -n < /old/home/yc/vpn.txt
 }
