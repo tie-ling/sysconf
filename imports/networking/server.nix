@@ -5,7 +5,6 @@
       # nfsv4
       2049
     ];
-    allowedUDPPorts = [
-    ];
+    allowedUDPPorts = [ ];
   };
 }

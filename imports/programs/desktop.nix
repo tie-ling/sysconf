@@ -21,9 +21,9 @@
     enable = true;
     extraPackages = builtins.attrValues {
       inherit (pkgs)
-        swaylock swayidle foot wl-gammactl brightnessctl fuzzel grim
-        libva-utils w3m gsettings-desktop-schemas pavucontrol waybar
-        wl-clipboard wf-recorder;
+        swaylock swayidle foot wl-gammactl brightnessctl fuzzel grim libva-utils
+        w3m gsettings-desktop-schemas pavucontrol waybar wl-clipboard
+        wf-recorder;
     };
     # must be enabled, or else many programs will crash
     wrapperFeatures.gtk = true;
