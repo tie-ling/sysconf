@@ -96,18 +96,13 @@ gm () {
 	    read -r choice
 	    case "${choice}" in
 		md)
-		    (gammastep -O 5000 -b 0.75 &)
+                    (wl-gammactl -c 1.000 -b 0.7 -g 1.000 &)
 		    ;;
 		mn)
-		    (gammastep -O 3000 -b 0.56 &)
-		    ;;
-		ld)
-		    (gammastep -O 3000 &)
+		    (wl-gammactl -c 1.000 -b 0.5 -g 1.000 &)
 		    ;;
 		r)
-		    pkill gammastep
-		    (gammastep -x &)
-		    pkill gammastep
+		    pkill wl-gammactl
 		    ;;
                 *)
                     printf "no input given"
