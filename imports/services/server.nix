@@ -17,6 +17,8 @@
         interval = "quarterly";
       };
     };
+    # nfs4 does not need rpcbind
+    services.rpcbind.enable = false;
     nfs = {
       # kodi/coreelec uses nfs3 by default
       # switch to nfs4 by using settings here
@@ -27,6 +29,10 @@
       server = {
         enable = true;
         createMountPoints = true;
+        extraNfsdConfig = ''
+          vers3=no
+          vers4=yes
+        '';
         exports = ''
           /rtorrent    192.168.1.0/24(ro,all_squash)
         '';
