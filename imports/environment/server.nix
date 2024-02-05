@@ -2,7 +2,7 @@
   environment = {
     systemPackages = builtins.attrValues {
       inherit (pkgs)
-        smartmontools darkhttpd pyrosimple woeusb _7zz exfatprogs;
+        smartmontools darkhttpd pyrosimple woeusb _7zz exfatprogs emacs-nox;
     };
     loginShellInit = ''
       dsrv () {
