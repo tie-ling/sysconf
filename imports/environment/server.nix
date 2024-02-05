@@ -2,7 +2,7 @@
   environment = {
     systemPackages = builtins.attrValues {
       inherit (pkgs)
-        smartmontools darkhttpd pyrosimple woeusb _7zz exfatprogs emacs-nox;
+        smartmontools darkhttpd pyrosimple woeusb _7zz exfatprogs;
     };
     loginShellInit = ''
       dsrv () {
@@ -28,7 +28,7 @@
          tmux attach-session
       }
       e () {
-        $EDITOR $@
+        ${pkgs.emacs-nox}/bin/emacsclient --create-frame --alternate-editor= $@
       }
     '';
   };
