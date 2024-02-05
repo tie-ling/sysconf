@@ -18,7 +18,7 @@
       };
     };
     # nfs4 does not need rpcbind
-    services.rpcbind.enable = lib.mkForce false;
+    rpcbind.enable = lib.mkForce false;
     nfs = {
       # kodi/coreelec uses nfs3 by default
       # switch to nfs4 by using settings here
