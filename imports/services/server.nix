@@ -30,11 +30,6 @@
         exports = ''
           /rtorrent    192.168.1.0/24(ro,all_squash)
         '';
-        # disable nfs3
-        extraNfsdConfig = ''
-          vers2=n
-          vers3=n
-        '';
       };
     };
     samba-wsdd.enable = false;
