@@ -98,13 +98,13 @@ I should rotate GPG keys on a biannual basis.
 17. Deploy key on other managed laptops.
 18. Restore new home:
     #+begin_src sh
-      mv $HOME/.gnupg $HOME/oldgpghome
-      mv $HOME/newgpghome $HOME/.gnupg
+      mv $GNUPGHOME $HOME/oldgpghome
+      mv $HOME/newgpghome $GNUPGHOME
     #+end_src
 19. Export new public and ssh key:
     #+begin_src sh
-      gpg --export --armor --output pubkey.asc
-      gpg --export-ssh-key yuchen@posteo.net
+      gpg --export --armor
+      gpg --export-ssh-key gyuchen86@gmail.com
     #+end_src
 20. Upload key to [[https://keys.openpgp.org/][key server]].
 21. Update pubkey and ssh key on Github and other web services.
