@@ -36,7 +36,7 @@ in {
         settings = { PasswordAuthentication = false; };
       };
       tor = {
-        enable = mkDefault false;
+        enable = mkDefault true;
         client = {
           enable = true;
           dns.enable = true;
