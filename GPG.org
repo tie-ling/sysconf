@@ -44,8 +44,8 @@ I should rotate GPG keys on a biannual basis.
      Keygrip = A5FDE8B1C0BE6309C89696B5E40441027B0B24BD
      uid           [ultimate] gyuchen86@gmail.com
      ssb   cv25519 2024-02-07 [E]
-     Keygrip = 622F3F9329375B22EBA678B73356D0EFEAC9C131 <-- [A] stands for Authenticate
-     ssb   ed25519 2024-02-07 [A]
+     Keygrip = 622F3F9329375B22EBA678B73356D0EFEAC9C131
+     ssb   ed25519 2024-02-07 [A]                       <-- [A] stands for Authenticate
      Keygrip = 29A02B877CCE8B816378187DB9DB1BE010650661 <-- SSH key
    #+end_src
 7. Add SSH key keygrip to =$HOME/.gnupg/sshcontrol=
