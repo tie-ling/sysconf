@@ -19,6 +19,18 @@
       uid = 1000;
     };
   };
+  home-manager.users.yc.accounts.email.accounts = {
+    "gmail" = {
+      address = "gyuchen86@gmail.com";
+      flavor = "gmail";
+      notmuch.enable = true;
+      mbsync.enable = true;
+      msmtp.enable = true;
+      passwordCommand = "pass show email/gmail-app-password";
+      realName = "Yuchen Guo";
+      maildirBasePath = "/old/home/yc/Mail";
+    };
+  };
   home-manager.users.yc.home = {
     username = "yc";
     homeDirectory = "/home/yc";
