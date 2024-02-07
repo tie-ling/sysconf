@@ -2,6 +2,8 @@
 let inherit (lib) mkDefault;
 in {
   home-manager.users.yc.programs = {
+    msmtp.enable = true;
+    notmuch.enable = true;
     bash = {
       enable = true;
       initExtra = "if [ -f ~/.config/yc.sh ]; then source ~/.config/yc.sh; fi";

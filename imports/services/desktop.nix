@@ -5,7 +5,8 @@
       package = ((pkgs.emacsPackagesFor pkgs.emacs29-nox).emacsWithPackages
         (epkgs:
           builtins.attrValues {
-            inherit (epkgs.melpaPackages) nix-mode magit pyim pyim-basedict;
+            inherit (epkgs.melpaPackages)
+              nix-mode magit pyim pyim-basedict notmuch;
             inherit (epkgs.elpaPackages) auctex;
             inherit (epkgs.treesit-grammars) with-all-grammars;
           }));

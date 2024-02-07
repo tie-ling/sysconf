@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   home-manager.users.yc.services = {
+    mbsync.enable = true;
     swayidle = {
       enable = true;
       events = [
