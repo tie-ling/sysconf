@@ -2,8 +2,6 @@
 let inherit (lib) mkDefault;
 in {
   home-manager.users.yc.programs = {
-    msmtp.enable = true;
-    notmuch.enable = true;
     bash = {
       enable = true;
       initExtra = "if [ -f ~/.config/yc.sh ]; then source ~/.config/yc.sh; fi";
@@ -29,9 +27,9 @@ in {
     };
     home-manager.enable = true;
     # use gnus instead
-    mbsync.enable = false;
-    msmtp.enable = false;
-    notmuch.enable = false;
+    mbsync.enable = true;
+    msmtp.enable = true;
+    notmuch.enable = true;
     mpv = {
       enable = true;
       config = {
