@@ -4,7 +4,6 @@
     useDHCP = true;
     useNetworkd = true;
     hosts = { "200:8bcd:55f4:becc:4d85:2fa6:2ed2:5eba" = [ "tl.yc" ]; };
-    # nameservers = [ "::1" ];
     wireless = {
       enable = true;
       allowAuxiliaryImperativeNetworks = true;
@@ -21,4 +20,24 @@
     };
   };
   systemd.services.wpa_supplicant.wantedBy = [ "multi-user.target" ];
+  systemd.network = {
+    enable = true;
+    networks = {
+      "99-ethernet-default-dhcp" = {
+        dhcpV4Config = {
+          UseDNS = false;
+        };
+        dhcpV6Config = {
+          UseDNS = false;
+        };
+      "99-wireless-client-dhcp" = {
+        dhcpV4Config = {
+          UseDNS = false;
+        };
+        dhcpV6Config = {
+          UseDNS = false;
+        };
+      };
+    };
+  };
 }

@@ -12,12 +12,18 @@ in {
     services = {
       fwupd = { enable = true; };
       logrotate.checkConfig = false;
-      stubby = {
-        # slow and unreliable
-        enable = false;
-        settings = pkgs.stubby.passthru.settingsExample;
+      dnscrypt-proxy2 = {
+        enable = true;
+        upstreamDefaults = true;
+        settings = {
+          ipv6_servers = true;
+          listen_addresses = [ "127.0.0.1:53" "[::1]:53" ];
+        };
       };
-      resolved = { enable = true; };
+      resolved = {
+        enable = true;
+        extraConfig = "DNS=[::1]:53";
+      };
       tlp = {
         enable = true;
         settings = {
