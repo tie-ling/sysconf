@@ -22,7 +22,6 @@ in {
       };
       resolved = {
         enable = true;
-        extraConfig = "DNS=[::1]:53";
       };
       tlp = {
         enable = true;

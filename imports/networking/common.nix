@@ -24,10 +24,12 @@
     enable = true;
     networks = {
       "99-ethernet-default-dhcp" = {
+        networkConfig = { DNS = "[::1]:53"; };
         dhcpV4Config = { UseDNS = false; };
         dhcpV6Config = { UseDNS = false; };
       };
       "99-wireless-client-dhcp" = {
+        networkConfig = { DNS = "[::1]:53"; };
         dhcpV4Config = { UseDNS = false; };
         dhcpV6Config = { UseDNS = false; };
       };
