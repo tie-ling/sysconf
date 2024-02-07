@@ -93,23 +93,14 @@
   (:map dired-mode-map
         ("C-o" . dired-open-pdf)))
 
-(use-package gnus
+(use-package notmuch
   :custom
-  (user-mail-address "yguo@posteo.net")
-  (gnus-treat-display-smileys nil)
-  (gnus-inhibit-images t)
-  (gnus-select-method '(nnimap "posteo.de"))
-  (gnus-generate-tree-function 'gnus-generate-horizontal-tree)
-  (gnus-message-replysign t)
-  (message-send-mail-function 'smtpmail-send-it)
-  (send-mail-function 'smtpmail-send-it)
-  (smtpmail-smtp-server "posteo.de")
-  (smtpmail-smtp-service 465)
-  (smtpmail-stream-type 'ssl)
-  (mail-envelope-from 'header)
-  (mail-host-address "lan")
+  (notmuch-crypto-process-mime nil)
+  (send-mail-function 'sendmail-send-it)
+  (sendmail-program "msmtp")
   (mail-specify-envelope-from t)
-  (message-sendmail-envelope-from 'header))
+  (message-sendmail-envelope-from 'header)
+  (mail-envelope-from 'header))
 
 (use-package latex
   :hook
