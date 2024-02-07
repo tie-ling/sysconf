@@ -103,12 +103,12 @@ I should rotate GPG keys on a biannual basis.
     #+end_src
 19. Export new public and ssh key:
     #+begin_src sh
-      gpg --export --armor
+      gpg --export --armor --output pubkey.txt
       gpg --export-ssh-key gyuchen86@gmail.com
     #+end_src
 20. Upload key to [[https://keys.openpgp.org/][key server]].
 21. Update pubkey and ssh key on Github and other web services.
 22. Appendix: To restore GNUPGHOME, use:
     #+begin_src sh
-      tar --auto-compress --extract --file gpg.tar.xz --directory /oldroot/$HOME/
+      tar --auto-compress --extract --file gpg.tar.xz --directory /
     #+end_src
