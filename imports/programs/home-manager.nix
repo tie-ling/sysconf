@@ -23,6 +23,11 @@ in {
           port = 65222;
           proxyCommand = "${pkgs.libressl.nc}/bin/nc -x localhost:4447 %h %p";
         };
+        "d7xl6wudp46fzlv2rrktkoj5xakvamunt3ykmvn2qn2q5765de4dkiad.onion" = {
+          user = "yc";
+          port = 65222;
+          proxyCommand = "${pkgs.libressl.nc}/bin/nc -x localhost:9050 %h %p";
+        };
       };
     };
     home-manager.enable = true;
