@@ -24,6 +24,7 @@
 
     accounts = {
       "gmail" = {
+        primary = true;
         address = "gyuchen86@gmail.com";
         flavor = "gmail";
         notmuch.enable = true;
