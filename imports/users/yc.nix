@@ -28,7 +28,12 @@
         address = "gyuchen86@gmail.com";
         flavor = "gmail.com";
         notmuch.enable = true;
-        mbsync.enable = true;
+        mbsync = {
+          enable = true;
+          create = "both";
+          expunge = "both";
+          remove = "both";
+        };
         msmtp.enable = true;
         passwordCommand = "pass show email/gmail-app-password";
         realName = "Yuchen Guo";
