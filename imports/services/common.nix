@@ -20,9 +20,7 @@ in {
           listen_addresses = [ "127.0.0.1:53" "[::1]:53" ];
         };
       };
-      resolved = {
-        enable = true;
-      };
+      resolved = { enable = true; };
       tlp = {
         enable = true;
         settings = {
