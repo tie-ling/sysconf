@@ -26,7 +26,7 @@
       "gmail" = {
         primary = true;
         address = "gyuchen86@gmail.com";
-        flavor = "gmail";
+        flavor = "gmail.com";
         notmuch.enable = true;
         mbsync.enable = true;
         msmtp.enable = true;
