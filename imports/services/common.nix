@@ -13,10 +13,11 @@ in {
       fwupd = { enable = true; };
       logrotate.checkConfig = false;
       stubby = {
-        enable = true;
+        # slow and unreliable
+        enable = false;
         settings = pkgs.stubby.passthru.settingsExample;
       };
-      resolved = { enable = false; };
+      resolved = { enable = true; };
       tlp = {
         enable = true;
         settings = {
