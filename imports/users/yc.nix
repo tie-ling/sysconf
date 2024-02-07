@@ -35,7 +35,7 @@
           remove = "both";
         };
         msmtp.enable = true;
-        passwordCommand = "pass show email/gmail-app-password";
+        passwordCommand = "PASSWORD_STORE_DIR=/old/home/yc/passwd pass show email/gmail-app-password";
         realName = "Yuchen Guo";
       };
     };
