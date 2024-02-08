@@ -29,10 +29,47 @@
         flavor = "gmail.com";
         notmuch.enable = true;
         mbsync = {
+          flatten = "-";
           enable = true;
           create = "both";
           expunge = "both";
           remove = "both";
+          patterns = [ "INBOX" ];
+          groups = {
+            gmail-group = {
+              channels = {
+                # https://apple.stackexchange.com/a/201346
+                sent = {
+                  farPattern = "[Gmail]/Sent Mail";
+                  nearPattern = "Sent";
+                };
+                trash = {
+                  farPattern = "[Gmail]/Trash";
+                  nearPattern = "Trash"
+                };
+                all = {
+                  farPattern = "[Gmail]/All Mail";
+                  nearPattern = "All"
+                };
+                drafts = {
+                  farPattern = "[Gmail]/Drafts";
+                  nearPattern = "Drafts";
+                };
+                archive = {
+                  farPattern = "[Gmail]/Starred";
+                  nearPattern = "Archive";
+                };
+                flagged = {
+                  farPattern = "[Gmail]/Important";
+                  nearPattern = "Flagged";
+                };
+                junk = {
+                  farPattern = "[Gmail]/Spam";
+                  nearPattern = "Junk";
+                };
+              };
+            };
+          };
         };
         msmtp.enable = true;
         passwordCommand = "PASSWORD_STORE_DIR=/old/home/yc/passwd pass show email/gmail-app-password";
