@@ -8,6 +8,7 @@
  ;; If there is more than one, they won't work right.
  '(send-mail-function 'sendmail-send-it)
  '(sendmail-program "msmtp")
+ '(user-mail-address "gyuchen86@gmail.com")
  '(mail-specify-envelope-from t)
  '(message-sendmail-envelope-from 'header)
  '(mail-envelope-from 'header)
@@ -146,6 +147,17 @@
              ("\\mathbb{C}" . ?ℂ)
              ("\\mathbb{K}" . ?𝕂)))
     (add-to-list 'tex--prettify-symbols-alist symb)))
+
+(use-package mu4e
+  :custom
+  (mu4e-get-mail-command "mbsync -a")
+  (mu4e-sent-folder "/gmail/Sent/")
+  (mu4e-drafts-folder "/gmail/Drafts/")
+  (mu4e-trash-folder "/gmail/Trash/")
+  (mu4e-refile-folder "/gmail/Archive/")
+  (mu4e-attachment-dir "~/Downloads/")
+  ; gmail takes care of keeping copie in the sent folder
+  (mu4e-sent-messages-behavior 'delete))
 
 ;; zh-cn input engine
 (use-package pyim
