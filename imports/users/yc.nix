@@ -39,31 +39,43 @@
             gmail-group = {
               channels = {
                 # https://apple.stackexchange.com/a/201346
+                inbox = {
+                  Create = "both";
+                  farPattern = "INBOX";
+                  nearPattern = "Inbox"
+                };
                 sent = {
+                  Create = "both";
                   farPattern = "[Gmail]/Sent Mail";
                   nearPattern = "Sent";
                 };
                 trash = {
+                  Create = "both";
                   farPattern = "[Gmail]/Trash";
                   nearPattern = "Trash";
                 };
                 all = {
+                  Create = "both";
                   farPattern = "[Gmail]/All Mail";
                   nearPattern = "All";
                 };
                 drafts = {
+                  Create = "both";
                   farPattern = "[Gmail]/Drafts";
                   nearPattern = "Drafts";
                 };
                 archive = {
+                  Create = "both";
                   farPattern = "[Gmail]/Starred";
                   nearPattern = "Archive";
                 };
                 flagged = {
+                  Create = "both";
                   farPattern = "[Gmail]/Important";
                   nearPattern = "Flagged";
                 };
                 junk = {
+                  Create = "both";
                   farPattern = "[Gmail]/Spam";
                   nearPattern = "Junk";
                 };
