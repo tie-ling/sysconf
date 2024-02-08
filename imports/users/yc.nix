@@ -40,42 +40,42 @@
               channels = {
                 # https://apple.stackexchange.com/a/201346
                 inbox = {
-                  Create = "both";
+                  extraConfig.Create = "Near";
                   farPattern = "INBOX";
                   nearPattern = "Inbox";
                 };
                 sent = {
-                  Create = "both";
+                  extraConfig.Create = "Near";
                   farPattern = "[Gmail]/Sent Mail";
                   nearPattern = "Sent";
                 };
                 trash = {
-                  Create = "both";
+                  extraConfig.Create = "Near";
                   farPattern = "[Gmail]/Trash";
                   nearPattern = "Trash";
                 };
                 all = {
-                  Create = "both";
+                  extraConfig.Create = "Near";
                   farPattern = "[Gmail]/All Mail";
                   nearPattern = "All";
                 };
                 drafts = {
-                  Create = "both";
+                  extraConfig.Create = "Near";
                   farPattern = "[Gmail]/Drafts";
                   nearPattern = "Drafts";
                 };
                 archive = {
-                  Create = "both";
+                  extraConfig.Create = "Near";
                   farPattern = "[Gmail]/Starred";
                   nearPattern = "Archive";
                 };
                 flagged = {
-                  Create = "both";
+                  extraConfig.Create = "Near";
                   farPattern = "[Gmail]/Important";
                   nearPattern = "Flagged";
                 };
                 junk = {
-                  Create = "both";
+                  extraConfig.Create = "Near";
                   farPattern = "[Gmail]/Spam";
                   nearPattern = "Junk";
                 };
