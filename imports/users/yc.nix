@@ -42,7 +42,7 @@
                 inbox = {
                   Create = "both";
                   farPattern = "INBOX";
-                  nearPattern = "Inbox"
+                  nearPattern = "Inbox";
                 };
                 sent = {
                   Create = "both";
