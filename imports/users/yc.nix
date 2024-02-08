@@ -27,9 +27,8 @@
         primary = true;
         address = "gyuchen86@gmail.com";
         flavor = "gmail.com";
-        notmuch.enable = true;
+        mu.enable = true;
         mbsync = {
-          flatten = "-";
           enable = true;
           create = "both";
           expunge = "both";

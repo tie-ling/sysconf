@@ -6,6 +6,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(send-mail-function 'sendmail-send-it)
+ '(sendmail-program "msmtp")
+ '(mail-specify-envelope-from t)
+ '(message-sendmail-envelope-from 'header)
+ '(mail-envelope-from 'header)
  '(auto-fill-function 'do-auto-fill t)
  '(default-input-method "german-postfix")
  '(modus-themes-bold-constructs t)
@@ -92,15 +97,6 @@
   :bind
   (:map dired-mode-map
         ("C-o" . dired-open-pdf)))
-
-(use-package notmuch
-  :custom
-  (notmuch-crypto-process-mime nil)
-  (send-mail-function 'sendmail-send-it)
-  (sendmail-program "msmtp")
-  (mail-specify-envelope-from t)
-  (message-sendmail-envelope-from 'header)
-  (mail-envelope-from 'header))
 
 (use-package latex
   :hook

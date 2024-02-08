@@ -34,7 +34,7 @@ in {
     # use gnus instead
     mbsync.enable = true;
     msmtp.enable = true;
-    notmuch.enable = true;
+    mu.enable = true;
     mpv = {
       enable = true;
       config = {

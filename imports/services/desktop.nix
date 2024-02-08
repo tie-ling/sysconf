@@ -6,7 +6,7 @@
         (epkgs:
           builtins.attrValues {
             inherit (epkgs.melpaPackages)
-              nix-mode magit pyim pyim-basedict notmuch;
+              nix-mode magit pyim pyim-basedict mu4e;
             inherit (epkgs.elpaPackages) auctex;
             inherit (epkgs.treesit-grammars) with-all-grammars;
           }));
