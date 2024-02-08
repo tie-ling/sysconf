@@ -45,11 +45,11 @@
                 };
                 trash = {
                   farPattern = "[Gmail]/Trash";
-                  nearPattern = "Trash"
+                  nearPattern = "Trash";
                 };
                 all = {
                   farPattern = "[Gmail]/All Mail";
-                  nearPattern = "All"
+                  nearPattern = "All";
                 };
                 drafts = {
                   farPattern = "[Gmail]/Drafts";
@@ -72,7 +72,8 @@
           };
         };
         msmtp.enable = true;
-        passwordCommand = "PASSWORD_STORE_DIR=/old/home/yc/passwd pass show email/gmail-app-password";
+        passwordCommand =
+          "PASSWORD_STORE_DIR=/old/home/yc/passwd pass show email/gmail-app-password";
         realName = "Yuchen Guo";
       };
     };
