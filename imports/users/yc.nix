@@ -53,11 +53,6 @@
                   farPattern = "[Gmail]/Trash";
                   nearPattern = "Trash";
                 };
-                all = {
-                  extraConfig.Create = "Near";
-                  farPattern = "[Gmail]/All Mail";
-                  nearPattern = "All";
-                };
                 drafts = {
                   extraConfig.Create = "Near";
                   farPattern = "[Gmail]/Drafts";
