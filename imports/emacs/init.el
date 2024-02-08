@@ -150,6 +150,7 @@
 
 (use-package mu4e
   :custom
+  (mu4e-change-filenames-when-moving t)
   (mu4e-get-mail-command "mbsync -a")
   (mu4e-sent-folder "/gmail/Sent/")
   (mu4e-drafts-folder "/gmail/Drafts/")
