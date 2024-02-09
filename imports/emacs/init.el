@@ -148,8 +148,10 @@
              ("\\mathbb{K}" . ?𝕂)))
     (add-to-list 'tex--prettify-symbols-alist symb)))
 
+; see (info "(mu4e)Gmail configuration")
 (use-package mu4e
   :custom
+  (message-kill-buffer-on-exit t)
   (mail-user-agent 'mu4e-user-agent)
   (mu4e-change-filenames-when-moving t)
   (mu4e-get-mail-command "mbsync -a")
