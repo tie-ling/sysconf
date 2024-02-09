@@ -150,6 +150,7 @@
 
 (use-package mu4e
   :custom
+  (mail-user-agent 'mu4e-user-agent)
   (mu4e-change-filenames-when-moving t)
   (mu4e-get-mail-command "mbsync -a")
   (mu4e-sent-folder "/gmail/Sent/")
