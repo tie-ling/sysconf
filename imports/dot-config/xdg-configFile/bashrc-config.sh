@@ -50,7 +50,8 @@ gpub ()
             echo "================"
             echo "${path}"
             git -C "${path}" status
-            git -C "${path}" push
+            git -C "${path}" push origin
+            git -C "${path}" push gh
         done
     else
         for path in ${git_paths}; do
