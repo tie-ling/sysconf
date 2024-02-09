@@ -22,7 +22,7 @@
     extraPackages = builtins.attrValues {
       inherit (pkgs)
         swaylock swayidle foot wl-gammactl brightnessctl fuzzel grim libva-utils
-        w3m gsettings-desktop-schemas pavucontrol waybar wl-clipboard
+        w3m gsettings-desktop-schemas pavucontrol waybar wl-clipboard gammastep
         wf-recorder;
     };
     # must be enabled, or else many programs will crash
