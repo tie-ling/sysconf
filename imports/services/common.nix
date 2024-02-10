@@ -20,7 +20,14 @@ in {
           listen_addresses = [ "127.0.0.1:53" "[::1]:53" ];
         };
       };
-      resolved = { enable = true; };
+      resolved = {
+        enable = true;
+        fallbackDns = [ "::1" ];
+        extraConfig = ''
+          DNS=::1
+          Domains=~.
+        '';
+      };
       tlp = {
         enable = true;
         settings = {
