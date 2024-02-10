@@ -13,7 +13,7 @@
 # file names, the list of names is only guaranteed to
 # be distinguished from one another when null-character is used to separate them
 
-for path in Downloads .mbsync; do
+for path in Downloads .mbsync .cache/mu; do
     if [ ! -d $HOME/${path} ]; then
         if [ ! -d /old/home/yc/${path} ]; then
             mkdir -p /old/home/yc/${path}
