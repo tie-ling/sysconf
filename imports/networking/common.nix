@@ -22,5 +22,20 @@
   systemd.services.wpa_supplicant.wantedBy = [ "multi-user.target" ];
   systemd.network = {
     enable = true;
+    networks = {
+      "99-ethernet-default-dhcp" = {
+        dns = [ "[::1]:53" ];
+        dhcpV4Config = { UseDNS = false; };
+        dhcpV6Config = { UseDNS = false; };
+        ipv6AcceptRAConfig = { UseDNS = false; };
+      };
+      "99-wireless-client-dhcp" = {
+        dns = [ "[::1]:53" ];
+        dhcpV4Config = { UseDNS = false; };
+        dhcpV6Config = { UseDNS = false; };
+        ipv6AcceptRAConfig = { UseDNS = false; };
+      };
+    };
+
   };
 }
