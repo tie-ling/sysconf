@@ -23,6 +23,8 @@ in {
       resolved = {
         enable = true;
         fallbackDns = [ "::1" ];
+        # Use the construct "~."
+        # to use the DNS servers defined for this link preferably for all domains.
         extraConfig = ''
           DNS=::1
           Domains=~.
