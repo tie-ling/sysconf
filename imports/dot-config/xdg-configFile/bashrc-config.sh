@@ -13,12 +13,14 @@
 # file names, the list of names is only guaranteed to
 # be distinguished from one another when null-character is used to separate them
 
-if [ ! -d $HOME/Downloads ]; then
-    if [ ! -d /old/home/yc/Downloads ]; then
-        mkdir -p /old/home/yc/Downloads
+for path in Downloads .mbsync; do
+    if [ ! -d $HOME/${path} ]; then
+        if [ ! -d /old/home/yc/${path} ]; then
+            mkdir -p /old/home/yc/${path}
+        fi
+        ln --symbolic /old/home/yc/${path} $HOME/${path}
     fi
-    ln --symbolic /old/home/yc/Downloads $HOME/Downloads
-fi
+done
 
 y () {
     mpv "${@}"
