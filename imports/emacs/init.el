@@ -159,11 +159,15 @@
             :match-func
             (lambda (msg)
               (when msg
-                (string-match-p "^/gmail" (mu4e-message-field msg :maildir))))
+                (string-prefix-p "/gmail" (mu4e-message-field msg :maildir))))
             :vars
             '((user-mail-address . "gyuchen86@gmail.com")
               (user-full-name . "Yuchen Guo")
               (message-user-organization . "Tieling")
+              (mu4e-sent-folder . "/gmail/Sent/")
+              (mu4e-drafts-folder . "/gmail/Drafts/")
+              (mu4e-trash-folder . "/gmail/Trash/")
+              (mu4e-refile-folder . "/gmail/Archive/")
               ; gmail takes care of keeping copie in the sent folder
               (mu4e-sent-messages-behavior 'delete)
               (mu4e-compose-signature . (concat "Yuchen Guo\n"))))))
