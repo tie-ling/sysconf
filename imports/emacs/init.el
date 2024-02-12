@@ -150,18 +150,31 @@
 
 ; see (info "(mu4e)Gmail configuration")
 (use-package mu4e
+  :config
+  (set-variable 'read-mail-command 'mu4e)
+  (setq mu4e-contexts
+        ; (info "(mu4e)Contexts example")
+        `(,(make-mu4e-context
+            :name "Private"
+            :match-func
+            (lambda (msg)
+              (when msg
+                (string-prefix-p (mu4e-message-field msg :maildir) "/gmail")))
+            :vars
+            '((user-mail-address . "gyuchen86@gmail.com")
+              (user-full-name . "Yuchen Guo")
+              (message-user-organization . "Tieling")
+              ; gmail takes care of keeping copie in the sent folder
+              (mu4e-sent-messages-behavior 'delete)
+              (mu4e-compose-signature . (concat "Yuchen Guo\n"))))))
   :custom
+  (mu4e-context-policy 'pick-first)
+  (mu4e-compose-context-policy nil)
   (message-kill-buffer-on-exit t)
   (mail-user-agent 'mu4e-user-agent)
   (mu4e-change-filenames-when-moving t)
   (mu4e-get-mail-command "mbsync -a")
-  (mu4e-sent-folder "/gmail/Sent/")
-  (mu4e-drafts-folder "/gmail/Drafts/")
-  (mu4e-trash-folder "/gmail/Trash/")
-  (mu4e-refile-folder "/gmail/Archive/")
-  (mu4e-attachment-dir "~/Downloads/")
-  ; gmail takes care of keeping copie in the sent folder
-  (mu4e-sent-messages-behavior 'delete))
+  (mu4e-attachment-dir "~/Downloads/"))
 
 ;; zh-cn input engine
 (use-package pyim
