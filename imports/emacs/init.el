@@ -159,7 +159,7 @@
             :match-func
             (lambda (msg)
               (when msg
-                (string-prefix-p (mu4e-message-field msg :maildir) "/gmail")))
+                (string-match-p "^/gmail" (mu4e-message-field msg :maildir))))
             :vars
             '((user-mail-address . "gyuchen86@gmail.com")
               (user-full-name . "Yuchen Guo")
