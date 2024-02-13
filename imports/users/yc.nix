@@ -85,7 +85,7 @@
         };
         msmtp.enable = true;
         passwordCommand =
-          "PASSWORD_STORE_DIR=/old/home/yc/passwd pass show email/gmail-app-password";
+          "/usr/bin/env bash -c 'PASSWORD_STORE_DIR=/old/home/yc/passwd ${pkgs.pass}/bin/pass show email/gmail-app-password'";
         realName = "Yuchen Guo";
       };
     };
