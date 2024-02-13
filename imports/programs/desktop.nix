@@ -6,6 +6,8 @@
     settings = {
       default-cache-ttl = 34560000;
       max-cache-ttl = 34560000;
+      default-cache-ttl-ssh = 34560000;
+      max-cache-ttl-ssh = 34560000;
     };
   };
   # sway and related sound config
