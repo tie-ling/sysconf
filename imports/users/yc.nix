@@ -28,6 +28,12 @@
         address = "gyuchen86@gmail.com";
         flavor = "gmail.com";
         mu.enable = true;
+        imapnotify = {
+          enable = true;
+          boxes = [ "INBOX" ];
+          onNotify = "${pkgs.isync}/bin/mbsync gmail-group-inbox";
+          onNotifyPost = "${pkgs.mu}/bin/mu index && ${pkgs.alsa-utils}/bin/aplay /old/home/yc/email.wav";
+        };
         mbsync = {
           enable = true;
           create = "both";
