@@ -3,6 +3,10 @@
     enable = true;
     pinentryFlavor = (if config.programs.sway.enable then "qt" else "tty");
     enableSSHSupport = true;
+    settings = {
+      default-cache-ttl = 34560000;
+      max-cache-ttl = 34560000;
+    };
   };
   # sway and related sound config
   hardware.opengl.extraPackages =
