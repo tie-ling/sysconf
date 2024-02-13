@@ -168,14 +168,13 @@
               (mu4e-drafts-folder . "/gmail/Drafts/")
               (mu4e-trash-folder . "/gmail/Trash/")
               (mu4e-refile-folder . "/gmail/Archive/")
-              ; gmail takes care of keeping copie in the sent folder
-              (mu4e-sent-messages-behavior 'delete)
               (mu4e-compose-signature . (concat "Yuchen Guo\n"))))))
   :custom
   (mu4e-context-policy 'pick-first)
   (mu4e-compose-context-policy nil)
   (message-kill-buffer-on-exit t)
   (mail-user-agent 'mu4e-user-agent)
+  (mu4e-sent-messages-behavior 'sent)
   (mu4e-change-filenames-when-moving t)
   (mu4e-get-mail-command "mbsync -a")
   (mu4e-attachment-dir "~/Downloads/"))
