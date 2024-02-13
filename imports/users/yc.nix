@@ -84,7 +84,7 @@
           };
         };
         msmtp.enable = true;
-        passwordCommand = "cat /old/home/yc/email-password.txt";
+        passwordCommand = "${pkgs.coreutilsFull}/bin/cat /old/home/yc/email-password.txt";
         realName = "Yuchen Guo";
       };
     };
