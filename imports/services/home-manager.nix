@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   home-manager.users.yc.services = {
-    imapnotify.enable = true;
+    imapnotify.enable = false;
     swayidle = {
       enable = true;
       events = [
