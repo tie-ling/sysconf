@@ -31,7 +31,8 @@
         imapnotify = {
           enable = true;
           boxes = [ "INBOX" ];
-          onNotifyPost = "${config.services.emacs.package}/bin/emacsclient --eval '(mu4e-update-mail-and-index nil)'";
+          onNotifyPost =
+      "${config.services.emacs.package}/bin/emacsclient --eval '(progn (mu4e t) (mu4e-update-mail-and-index nil))'";
           onNotify = "${pkgs.alsa-utils}/bin/aplay /old/home/yc/email.wav";
         };
         mbsync = {
