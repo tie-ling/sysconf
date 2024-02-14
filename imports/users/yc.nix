@@ -31,7 +31,7 @@
         imapnotify = {
           enable = true;
           boxes = [ "INBOX" ];
-          onNotifyPost = "${pkgs.isync}/bin/mbsync gmail-group-inbox && ${pkgs.mu}/bin/mu index";
+          onNotifyPost = "${config.services.emacs.package}/bin/emacsclient --eval '(progn (mu4e--start) (mu4e-update-mail-and-index nil) (mu4e--stop))'";
           onNotify = "${pkgs.alsa-utils}/bin/aplay /old/home/yc/email.wav";
         };
         mbsync = {
