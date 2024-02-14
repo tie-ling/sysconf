@@ -31,8 +31,8 @@
         imapnotify = {
           enable = true;
           boxes = [ "INBOX" ];
-          onNotify = "${pkgs.isync}/bin/mbsync gmail-group-inbox";
-          onNotifyPost = "${pkgs.mu}/bin/mu index && ${pkgs.alsa-utils}/bin/aplay /old/home/yc/email.wav";
+          onNotifyPost = "${pkgs.isync}/bin/mbsync gmail-group-inbox && ${pkgs.mu}/bin/mu index";
+          onNotify = "${pkgs.alsa-utils}/bin/aplay /old/home/yc/email.wav";
         };
         mbsync = {
           enable = true;
