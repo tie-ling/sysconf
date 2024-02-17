@@ -1,0 +1,13 @@
+[Install]
+WantedBy=graphical-session.target
+
+[Service]
+Environment=PATH=/nix/store/7dpxg7ki7g8ynkdwcqf493p2x8divb4i-bash-5.2-p15/bin
+ExecStart=/nix/store/9lhpw5ssyjf0ij2sp0m5qk03l13dya2n-swayidle-1.8.0/bin/swayidle -w timeout 900 '/nix/store/hmps0izarywzfy3kj97svy4gv779i74v-swaylock-1.7.2/bin/swaylock --show-failed-attempts --ignore-empty-password --daemonize' timeout 910 '/nix/store/qgjsvm3c4131qasxqbzphhd62j0lvvwh-systemd-254.6/bin/systemctl suspend' before-sleep '/nix/store/hmps0izarywzfy3kj97svy4gv779i74v-swaylock-1.7.2/bin/swaylock  --show-failed-attempts --ignore-empty-password --daemonize' lock 'lock' after-resume '/nix/store/03167shkax5dxclnv6r3sd8waa6lq7ny-coreutils-full-9.3/bin/sleep 30; if /nix/store/gb18gj7zpbhdavmsdr5090rx7lsvxvyk-procps-3.3.17/bin/pgrep --exact swaylock; then /nix/store/qgjsvm3c4131qasxqbzphhd62j0lvvwh-systemd-254.6/bin/systemctl suspend; fi'
+Restart=always
+Type=simple
+
+[Unit]
+Description=Idle manager for Wayland
+Documentation=man:swayidle(1)
+PartOf=graphical-session.target

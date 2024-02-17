@@ -1,0 +1,56 @@
+[
+  {
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "BRI {percent}%",
+      "on-click": "/nix/store/dqm1xlddyzygijrf6nkav2ns6djl99mg-brightnessctl-0.5.1/bin/brightnessctl set 1%",
+      "on-click-right": "/nix/store/dqm1xlddyzygijrf6nkav2ns6djl99mg-brightnessctl-0.5.1/bin/brightnessctl set 100%",
+      "on-scroll-down": "/nix/store/dqm1xlddyzygijrf6nkav2ns6djl99mg-brightnessctl-0.5.1/bin/brightnessctl set 1%-",
+      "on-scroll-up": "/nix/store/dqm1xlddyzygijrf6nkav2ns6djl99mg-brightnessctl-0.5.1/bin/brightnessctl set +1%"
+    },
+    "battery": {
+      "format": "BAT {capacity}%"
+    },
+    "clock": {
+      "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+    "id": "bar-0",
+    "idle_inhibitor": {
+      "format": "{icon}",
+      "format-icons": {
+        "activated": "NOLOCK",
+        "deactivated": "LOCK"
+      }
+    },
+    "ipc": true,
+    "layer": "bottom",
+    "modules-center": [],
+    "modules-left": [
+      "sway/workspaces",
+      "sway/mode"
+    ],
+    "modules-right": [
+      "idle_inhibitor",
+      "pulseaudio",
+      "backlight",
+      "battery",
+      "clock"
+    ],
+    "position": "bottom",
+    "pulseaudio": {
+      "format": "VOL {volume}%",
+      "format-muted": "MUTED",
+      "on-click": "/nix/store/mbpr7qv5gflqbb1kd5hgm26p8s93nhyh-alsa-utils-1.2.10/bin/amixer set Master toggle"
+    },
+    "sway/workspaces": {
+      "disable-scroll-wraparound": true,
+      "enable-bar-scroll": true
+    },
+    "wlr/taskbar": {
+      "active-first": true,
+      "all-outputs": false,
+      "format": "{name}",
+      "on-click": "activate"
+    }
+  }
+]

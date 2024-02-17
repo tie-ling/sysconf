@@ -1,0 +1,13 @@
+[Install]
+WantedBy=graphical-session.target
+
+[Service]
+ExecStart=/nix/store/jj3djwvzgmwmnvh7rn4fgds9w1m9i47q-foot-1.16.2/bin/foot --server
+OOMPolicy=continue
+Restart=on-failure
+
+[Unit]
+After=graphical-session.target
+Description=Fast, lightweight and minimalistic Wayland terminal emulator.
+Documentation=man:foot(1)
+PartOf=graphical-session.target

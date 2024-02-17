@@ -1,0 +1,14 @@
+[Install]
+WantedBy=sway-session.target
+
+[Service]
+ExecReload=/nix/store/m38gwq0w8w7qyjn9s00balyp7cv3m5p9-coreutils-9.3/bin/kill -SIGUSR2 $MAINPID
+ExecStart=/nix/store/95hbvq263ryfav9smam61sxhl1qa5d1c-waybar-0.9.24/bin/waybar
+KillMode=mixed
+Restart=on-failure
+
+[Unit]
+After=graphical-session-pre.target
+Description=Highly customizable Wayland bar for Sway and Wlroots based compositors.
+Documentation=https://github.com/Alexays/Waybar/wiki
+PartOf=graphical-session.target

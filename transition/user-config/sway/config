@@ -1,0 +1,166 @@
+font pango:sans-serif bold 20.000000
+floating_modifier Mod4
+default_border normal 2
+default_floating_border normal 2
+hide_edge_borders smart
+focus_wrapping workspace
+focus_follows_mouse always
+focus_on_window_activation smart
+mouse_warping output
+workspace_layout tabbed
+workspace_auto_back_and_forth yes
+client.focused #8fffff #8fffff #000000 #2e9ef4 #285577
+client.focused_inactive #fafafa #fafafa #000000 #292d2e #222222
+client.unfocused #fafafa #fafafa #000000 #484e50 #5f676a
+client.urgent #2f343a #900000 #ffffff #900000 #900000
+client.placeholder #000000 #0c0c0c #ffffff #000000 #0c0c0c
+client.background #ffffff
+
+bindsym Mod4+1 workspace number 1
+bindsym Mod4+2 workspace number 2
+bindsym Mod4+3 workspace number 3
+bindsym Mod4+4 workspace number 4
+bindsym Mod4+5 workspace number 5
+bindsym Mod4+6 workspace number 6
+bindsym Mod4+7 workspace number 7
+bindsym Mod4+8 workspace number 8
+bindsym Mod4+9 workspace number 9
+bindsym Mod4+Backspace focus mode_toggle
+bindsym Mod4+Control+Backspace floating toggle
+bindsym Mod4+Control+Shift+b move output left
+bindsym Mod4+Control+Shift+f move output right
+bindsym Mod4+Control+Shift+n move output down
+bindsym Mod4+Control+Shift+p move output up
+bindsym Mod4+Control+b focus output left
+bindsym Mod4+Control+f focus output right
+bindsym Mod4+Control+l focus floating
+bindsym Mod4+Control+n focus output down
+bindsym Mod4+Control+p focus output up
+bindsym Mod4+Control+t focus tiling
+bindsym Mod4+Down focus down
+bindsym Mod4+Left focus left
+bindsym Mod4+Return exec /nix/store/jj3djwvzgmwmnvh7rn4fgds9w1m9i47q-foot-1.16.2/bin/footclient /nix/store/rfwnic0fx8y64vgdgil63216mqr22dcj-tmux-3.3a/bin/tmux attach-session
+bindsym Mod4+Right focus right
+bindsym Mod4+Shift+1 move container to workspace number 1
+bindsym Mod4+Shift+2 move container to workspace number 2
+bindsym Mod4+Shift+3 move container to workspace number 3
+bindsym Mod4+Shift+4 move container to workspace number 4
+bindsym Mod4+Shift+5 move container to workspace number 5
+bindsym Mod4+Shift+6 move container to workspace number 6
+bindsym Mod4+Shift+7 move container to workspace number 7
+bindsym Mod4+Shift+8 move container to workspace number 8
+bindsym Mod4+Shift+9 move container to workspace number 9
+bindsym Mod4+Shift+Down move down
+bindsym Mod4+Shift+Left move left
+bindsym Mod4+Shift+Right move right
+bindsym Mod4+Shift+Up move up
+bindsym Mod4+Shift+b move left
+bindsym Mod4+Shift+c reload
+bindsym Mod4+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+bindsym Mod4+Shift+f move right
+bindsym Mod4+Shift+h move left
+bindsym Mod4+Shift+j move down
+bindsym Mod4+Shift+k move up
+bindsym Mod4+Shift+l exec /nix/store/qgjsvm3c4131qasxqbzphhd62j0lvvwh-systemd-254.6/bin/systemctl suspend
+bindsym Mod4+Shift+minus move scratchpad
+bindsym Mod4+Shift+n move down
+bindsym Mod4+Shift+p move up
+bindsym Mod4+Shift+q kill
+bindsym Mod4+Shift+space focus parent; focus right; focus child
+bindsym Mod4+Shift+x move workspace back_and_forth
+bindsym Mod4+Up focus up
+bindsym Mod4+a focus parent
+bindsym Mod4+b focus left
+bindsym Mod4+c focus child
+bindsym Mod4+d exec /nix/store/srr1sq2bhv7fzjvqq1accv4chsjplcs0-fuzzel-1.9.2/bin/fuzzel
+bindsym Mod4+e focus parent
+bindsym Mod4+f focus right
+bindsym Mod4+f11 fullscreen toggle
+bindsym Mod4+h focus left
+bindsym Mod4+j focus down
+bindsym Mod4+k kill
+bindsym Mod4+l focus right
+bindsym Mod4+minus scratchpad show
+bindsym Mod4+n focus down
+bindsym Mod4+o exec /nix/store/jj3djwvzgmwmnvh7rn4fgds9w1m9i47q-foot-1.16.2/bin/footclient /nix/store/rfwnic0fx8y64vgdgil63216mqr22dcj-tmux-3.3a/bin/tmux attach-session
+bindsym Mod4+p focus up
+bindsym Mod4+r mode resize
+bindsym Mod4+s layout stacking
+bindsym Mod4+space focus right
+bindsym Mod4+t layout toggle splitv splith tabbed
+bindsym Mod4+v splitv
+bindsym Mod4+w move scratchpad
+bindsym Mod4+x workspace back_and_forth
+bindsym Mod4+y scratchpad show
+bindsym Shift+Print exec /nix/store/bifwriw4amv49rvdx6q9ds6h0h8m4z20-grim-1.4.1/bin/grim
+
+input "1149:8257:Kensington_Kensington_Slimblade_Trackball" {
+left_handed enabled
+}
+
+input "9580:109:GAOMON_Gaomon_Tablet_Pen" {
+map_to_region 1152 648 1408 792
+}
+
+input "type:keyboard" {
+xkb_file $HOME/.config/sway/yc-sticky-keymap
+}
+
+input "type:touchpad" {
+dwt enabled
+middle_emulation enabled
+natural_scroll enabled
+pointer_accel 0.5
+scroll_method edge
+tap enabled
+}
+
+output "*" {
+scale 1
+}
+
+output "DP-3" {
+mode --custom 2560x1440@60Hz
+}
+
+output "DP-4" {
+mode --custom 2560x1440@60Hz
+}
+
+output "DP-5" {
+mode --custom 2560x1440@60Hz
+}
+
+seat "*" {
+hide_cursor when-typing enable
+xcursor_theme Adwaita 48
+}
+
+mode "resize" {
+  bindsym Escape mode default
+  bindsym Space mode default
+  bindsym b resize shrink width 10px
+  bindsym f resize grow width 10px
+  bindsym n resize grow height 10px
+  bindsym p resize shrink height 10px
+}
+
+bar {
+  id bar-0
+  font pango:monospace 8.000000
+  mode hide
+  position bottom
+  swaybar_command /nix/store/95hbvq263ryfav9smam61sxhl1qa5d1c-waybar-0.9.24/bin/waybar
+}
+
+smart_gaps on
+smart_borders no_gaps
+exec_always /nix/store/qgjsvm3c4131qasxqbzphhd62j0lvvwh-systemd-254.6/bin/systemctl --user restart waybar
+
+exec "/nix/store/gyn2fy5cbnhkbgsck5wwnbjicwxgfhlp-dbus-1.14.10/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_TYPE NIXOS_OZONE_WL; systemctl --user start sway-session.target"
+xwayland disable
+titlebar_padding 1
+titlebar_border_thickness 0
+# clamshell/docking station
+bindswitch --reload --locked lid:on output eDP-1 disable
+bindswitch --reload --locked lid:off output eDP-1 enable

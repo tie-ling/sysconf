@@ -1,0 +1,8 @@
+[sendemail "gmail"]
+	envelopeSender = "auto"
+	from = "gyuchen86@gmail.com"
+	smtpServer = "/nix/store/434bdcfb09riyqpngsxfhjdm869vdwgj-msmtp-1.8.22/bin/msmtp"
+
+[user]
+	email = "yan@example.com"
+	name = "Yan Cao"
