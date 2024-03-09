@@ -29,10 +29,10 @@ EOF
 systemd-repart --dry-run=no --empty=force --discard=yes --key-file=/root/diskpw $DISK
 
 cryptsetup open -q --type plain --key-file /dev/random ${DISK}-part3 swap
-mkswap ${DISK}-part3
-swapon ${DISK}-part3
+mkswap /dev/mapper/swap
+swapon /dev/mapper/swap
 
-cryptsetup open --allow-discards --key-file=/root/diskpw ${DISK}-part2 root
+cryptsetup open --key-file=/root/diskpw ${DISK}-part2 root
 
 mount /dev/mapper/root /mnt
 
