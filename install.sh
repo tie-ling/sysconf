@@ -42,7 +42,5 @@ mount -o umask=077,iocharset=iso8859-1  ${DISK}-part1 /mnt/boot
 
 nixos-install --root /mnt --no-root-passwd
 
-
-umount -Rl $MNT
 poweroff
 
