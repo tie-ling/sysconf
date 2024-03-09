@@ -40,7 +40,6 @@ mkdir -p /mnt/boot
 mkfs.vfat ${DISK}-part1
 mount -o umask=077,iocharset=iso8859-1  ${DISK}-part1 /mnt/boot
 
-nixos-generate-config --root /mnt
 nixos-install --root /mnt --no-root-passwd
 
 
